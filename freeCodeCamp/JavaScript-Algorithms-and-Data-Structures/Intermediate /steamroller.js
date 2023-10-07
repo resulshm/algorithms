@@ -1,3 +1,7 @@
+/*
+  Steamroller
+Flatten a nested array. You must account for varying levels of nesting.
+*/
 function steamrollArray(arr) {
   let elem = [];
   getElements(arr, elem);
