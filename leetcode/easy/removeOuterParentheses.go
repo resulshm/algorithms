@@ -44,30 +44,10 @@ Constraints:
 - s is a valid parentheses string.
 */
 
-type Stack struct {
-	items []string
-}
-
-func (s *Stack) Push(item string) {
-	s.items = append(s.items, item)
-}
-
-func (s *Stack) Pop() {
-	if len(s.items) == 0 {
-		return
-	}
-
-	s.items = s.items[:len(s.items)-1]
-}
-
-func (s *Stack) IsEmpty() bool {
-	return len(s.items) == 0
-}
-
 func removeOuterParentheses(s string) string {
 	ans := ""
 	primitive := ""
-	stack := Stack{}
+	stack := StackString{}
 	for _, c := range s {
 		primitive += string(c)
 		if c == '(' {
