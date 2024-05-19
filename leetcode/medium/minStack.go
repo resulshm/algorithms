@@ -1,4 +1,4 @@
-package stack
+package medium
 
 /*
 	155. Min Stack
