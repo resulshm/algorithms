@@ -1,7 +1,5 @@
 package easy
 
-import "strings"
-
 /*
 	1047. Remove All Adjacent Duplicates In String
 
@@ -60,20 +58,20 @@ s consists of lowercase English letters.
 	}
 */
 
-func removeDuplicates(s string) string {
-	stack := stackString{}
+// func removeDuplicates(s string) string {
+// 	stack := stackString{}
 
-	for _, c := range s {
-		if stack.isEmpty() {
-			stack.push(string(c))
-			continue
-		}
+// 	for _, c := range s {
+// 		if stack.isEmpty() {
+// 			stack.push(string(c))
+// 			continue
+// 		}
 
-		if stack.lastItem() == string(c) {
-			stack.pop()
-			continue
-		}
-		stack.push(string(c))
-	}
-	return strings.Join(stack.items, "")
-}
+// 		if stack.lastItem() == string(c) {
+// 			stack.pop()
+// 			continue
+// 		}
+// 		stack.push(string(c))
+// 	}
+// 	return strings.Join(stack.items, "")
+// }
